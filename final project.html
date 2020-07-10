@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" class="emoji">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🔮 mary's tarot room 🔮</title>
+    <style>
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+      h1 {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 40px;
+        letter-spacing: .2rem;
+        padding: 50px 20px;
+        text-align: center;
+      }
+      h2 {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        font-weight:100;
+        letter-spacing: .2rem;
+        line-height:50px;
+        text-align: center;
+      }
+      audio {
+        display: block;
+        margin: 0 auto;
+        padding: 20px 20px;
+      }
+      audio:hover {
+        cursor:pointer;
+      }
+      body {
+      background: linear-gradient(
+        0deg,
+        rgb(145, 109, 213, 1) 0%,
+        rgba(62, 32, 109, 1) 100%
+      );
+      font-size: 62.5%;
+      font-style: arial;
+      letter-spacing: .2rem;
+      }
+      .tarotCards1 {
+        box-shadow:10px 10px 10px rgba(0, 0, 0, 0.5);
+        margin:auto auto 50px auto;
+      }
+      .tarotCards2 {
+        box-shadow:10px 10px 10px rgba(0, 0, 0, 0.5);
+        margin:auto auto 50px auto;
+      }
+     .tarotCards3 {
+        box-shadow:10px 10px 10px rgba(0, 0, 0, 0.5);
+        margin:auto auto 50px auto;
+      }
+      .content {
+        align-items: center;
+        display: flex;
+        flex-flow: row nowrap;
+        margin:10px 20px 80px 20px;
+      }
+      .tarotCards1:hover {
+        cursor:pointer;
+      }
+      .tarotCards2:hover {
+        cursor:pointer;
+      }
+      .tarotCards3:hover {
+        cursor:pointer;
+      }
+      .animation-box {
+        background-color: transparent;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        height:20rem;
+        margin: 0 auto 30px;;
+        overflow: hidden;
+        position: relative;
+        width: 75%;
+      }
+      .animation-container {
+        height: 15rem;
+        width: 1000rem;
+      }
+
+      @keyframes topFadeOut {
+        0% {
+          opacity: 0;
+          position: absolute;
+          top: -3rem;
+        }
+
+        75% {
+          opacity: 1;
+          position: absolute;
+          top: 25%;
+        }
+
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes bottomFadeOut {
+        0% {
+          bottom: -5rem;
+          opacity: 0;
+          position: absolute;
+        }
+
+        75% {
+          bottom: 25%;
+          opacity: 1;
+          position: absolute;
+        }
+
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes rightFadeInOut {
+        0% {
+          opacity: 0;
+          position: absolute;
+          right: -3rem;
+        }
+
+        75% {
+          opacity: 1;
+          position: absolute;
+          right: 10rem;
+        }
+
+        100% {
+          opacity: 0;
+          right: 10rem;
+        }
+      }
+
+      @keyframes fadeInOut {
+        0% {
+          opacity: 0;
+        }
+
+        45% {
+          opacity: 1;
+        }
+
+        100% {
+          opacity: 0%;
+        }
+      }
+      .first-text {
+        animation-duration: 7s;
+        animation-name:topFadeOut;
+        animation-iteration-count:infinite;
+        color: white;
+        font-size: 1.25rem;
+        left: 20rem;
+        opacity: 0;
+        position: absolute;
+        text-align:center;
+        top: 5rem;    
+      }
+
+      .second-text {
+        animation-delay: 1s;
+        animation-duration: 7s;
+        animation-iteration-count:infinite;
+        animation-name: rightFadeInOut;
+        color: white;
+        font-size: 1.25rem;
+        opacity: 0;
+        position: absolute;
+        top: 6rem;
+        text-align:center;
+      }
+
+      .third-text {
+        animation-delay: 2s;
+        animation-duration: 7s;
+        animation-iteration-count:infinite;
+        animation-name: fadeInOut;
+        color: white;
+        font-size: 1.25rem;
+        left: 10%;
+        opacity: 0;
+        position: absolute;
+        top: 10.5rem;  
+        text-align:center;
+      }
+      .fourth-text {
+      
+        animation-delay: 3s;
+        animation-duration: 7s;
+        animation-iteration-count:infinite;
+        animation-name: bottomFadeOut;
+        bottom: 75%;
+        color: white;
+        font-size: 1.25rem;
+        left: 53%;
+        opacity: 0;
+        position: absolute;
+        text-align:center;
+      }
+      .emoji {
+        cursor: url(https://abs.twimg.com/emoji/v2/72x72/2728.png) 30 30, auto;
+      }
+
+      p {
+        color:white;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size:25px;
+        letter-spacing: .2rem;
+        line-height:55px;
+        margin:70px auto 70px;
+        text-align:center;
+      }
+
+      hr {
+        border-style: solid;
+        border-color: #F8D9F6;
+        border-width: 0px 0 2px 0;
+        border-radius: 5px;
+        display:block;
+        height: 10px;
+        margin:0 auto 100px auto;
+        overflow: visible; 
+        width:40%;
+      }
+      .yourMind {
+        color:#FAFCD9;
+        font-style:italic;
+      }
+
+      .learnTarot {
+        color:white;
+        font-style:italic;
+        font-weight:400px;
+        text-decoration: underline wavy whitesmoke;
+      }
+
+      button {
+        background-color:#4A2B7C;
+        border-color:transparent;
+        border-radius:30px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+        color:white;
+        display:block;
+        font-size:20px;
+        margin: 0 auto;
+        padding:15px 20px 15px 20px;
+        transition: all 300ms ease-in-out;
+      }
+      button:hover {
+        background-color:white;
+        color:#4A2B7C;
+        cursor:pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="https://i.ibb.co/G3nnwpx/logo-mary.png" width="600px" />
+    <h1>
+      Welcome —<br />I have been waiting for you 🔮
+    </h1>
+    <h2>
+      What is on <span class="yourMind">your mind</span> today? 
+      <br>
+      Your <a href="https://www.thecut.com/article/tarot-cards.html" target="_blank" class="learnTarot">Tarot Card</a> awaits you below.
+    </h2>
+    <audio
+      controls
+      src="https://www.free-stock-music.com/music/hayden-folker-grace.mp3"
+    ></audio>
+    <section class="animation-box">
+      <div class="first-text">✨<br>leap and <br>the net will appear</div>
+      <div class="second-text">🌸<br>your dream will <br>come true</div>
+      <div class="third-text">🌿<br>everything is <br>written</div>
+      <div class="fourth-text">🌙<br> you are guided <br> everyday</div>
+    </section>
+ <hr>
+    <p>
+      <em>DAILY TAROT READING</em><br>
+      Take a deep breath. Choose a card that draws you in.
+    </p>
+  </br>
+<div class="content">
+  <img src="https://i.ibb.co/jgtfsxs/tarot3.jpg" width="300px" class=tarotCards1 />
+  <img src="https://i.ibb.co/PCzzDDF/tarot2.jpg" width="300px" class=tarotCards2 />
+  <img src="https://i.ibb.co/0Dp75wM/tarot1.jpg" width="300px" class=tarotCards3 />
+</div>
+<hr>
+<button class="signUp">
+‏‏‎‎‏‏‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎‏ ‎‏‏‎‎‏‏‎‎‎‎‏‎Sign Up for Free Tarot Readings 💜‏‏‎‎ ‎‏‏‎  ‎‏‏‎‎‏‏‎
+</button>
+<br>
+<br>
+<br>
+<button onclick="linkedIn()">
+    ‎Connect with Mary the Tarot Reader 💚
+</button>
+<br><br><br><br><br><br><br>
+<script>
+  function readTarotCard1() {
+  alert("A truly rich life contains love 💜 and art 🎨 in abundance.");
+  }
+  let tarot1 = document.querySelector(".tarotCards1")
+  tarot1.addEventListener("click", readTarotCard1)
+
+  function readTarotCard2() {
+  alert("All will go well 🤞 with your new project. 🍒");
+  }
+  let tarot2 = document.querySelector(".tarotCards2")
+  tarot2.addEventListener("click", readTarotCard2)
+
+  function readTarotCard3() {
+  alert("Change 🌿 is happening in your life, so go with the flow! 🌻");
+  }
+  let tarot3 = document.querySelector(".tarotCards3")
+  tarot3.addEventListener("click", readTarotCard3)
+
+  function signUp() {
+  let name = prompt("What is your name?");
+  let email = prompt("What is your email address?")
+  if (email !== "") {
+    var newLine = "\r\n"
+    var msg = `Thank you ${name}, look for my email in your inbox!`
+    msg += newLine;
+    msg += `Wishing you peace today.✨`;
+    alert(msg);
+  } else {
+    var newLine = "\r\n"
+    var msg = `Thank you ${name}.`
+    msg += newLine;
+    msg += `Wishing you peace today.✨`;
+    alert(msg);
+  }
+  }
+  let button = document.querySelector("button.signUp")
+  button.addEventListener("click", signUp)
+
+function linkedIn() {
+  window.open("http://linkedin.com/in/maryyoo");
+}
+</script>
+  </body>
+</html>
